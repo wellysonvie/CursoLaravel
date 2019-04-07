@@ -14,7 +14,7 @@ cd [MeuProjeto]
 php artisan
 ```
 
-##### Visualizar descrição comando (make:auth no caso):
+##### Visualizar descrição de comando:
 ```console
 php artisan help [comando]
 ```
@@ -38,14 +38,16 @@ DB_PASSWORD=[senha_do_usuario]
 ##### Criar models:
 ```console
 php artisan make:model [NomeModelSingular] -m
-// -m pra criar migration associada
+// -m pra criar a migration associada
 ```
 
 ##### Definir campos na migration associada:
+_Migrations_ são a forma de controle de versão do banco de dados do Laravel.
+Exemplo do método de criação de tabela na _migration_:
 ```php
 public function up()
 {
-    Schema::create('cursos', function (Blueprint $table) {
+    Schema::create('nome_tabela', function (Blueprint $table) {
         $table->increments('id');
         //definir campos da migration aqui
         $table->timestamps();
@@ -90,7 +92,7 @@ Route::get('/admin/cursos/deletar/{id}', ['as'=>'admin.cursos.deletar', 'uses'=>
     - pode ser usar `{param}` para passar algo por parâmetro.
     - ou `{param?}` caso o parâmetro não seja obrigatório.
 - O segundo é uma lista com os atributos:
-    - `as` é o alias para a url para ser usado na aplicação.
+    - `as` é o alias para a url que será utilizado na aplicação.
     - `uses` é o `controller@metodo` a ser chamado.
 
 ##### Criar layouts com o _blade_:
