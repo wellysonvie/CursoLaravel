@@ -8,7 +8,7 @@ sudo apt install php7.2-mbstring
 composer create-project --prefer-dist laravel/laravel [MeuProjeto] "5.3.*"
 ```
 
-##### Visualizar comandos disponíveis:
+##### Visualizar comandos disponíveis no _artisan_ (interface de linha de comando do Laravel):
 ```console
 cd [MeuProjeto]
 php artisan
@@ -93,7 +93,8 @@ Route::get('/admin/cursos/deletar/{id}', ['as'=>'admin.cursos.deletar', 'uses'=>
     - `as` é o alias para a url para ser usado na aplicação.
     - `uses` é o `controller@metodo` a ser chamado.
 
-##### Criar layouts
+##### Criar layouts com o _blade_:
+_Blade_ é a engine de templates do Laravel.
 No diretório `views` crie o subdiretório `layout`.
 Arquivos que utilizem a sintaxe _blade_ devem conter a extensão `.blade.php`.
 Exemplo de layout:
