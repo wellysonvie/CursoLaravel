@@ -126,8 +126,10 @@ Exemplo de layout:
 @yield('content')
 @include('layout._includes.footer')
 ```
+Diretivas do _blade_:
 
-As diretivas `@yield` serão substituídas pelo valor passado por parâmetro pelas views que utilizarem este layout.
+ - `@yield` serão substituídas pelo valor passado por parâmetro pelas views que utilizarem este layout.
+ - `@include` carrega as partes do layout (ajuda a modularizar).
 
 ##### Utilizando o layout (Ex. listagem de contatos):
 
@@ -153,7 +155,7 @@ Mais algumas diretivas do _blade_:
 
 ##### Carregando views (Ex. listagem de contatos):
 
-O controller criado deve conter as funções/métodos especificadas nas rotas.
+O controller criado deve conter as funções/métodos especificados nas rotas.
 
 No exemplo o controller `ContatoController` possui a seguinte função:
 ```php
